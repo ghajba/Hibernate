@@ -60,6 +60,7 @@
         <module>09_locking</module>
         <module>10_connection_pooling</module>
         <module>11_multi_tenancy</module>
+        <module>12_bootstrap</module>
     </modules>
 
     <build>
