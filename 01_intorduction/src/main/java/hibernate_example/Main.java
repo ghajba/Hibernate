@@ -16,7 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
         final Configuration configuration = new Configuration().configure();
-        final StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
+        final StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml");
         final SessionFactory factory = configuration.buildSessionFactory(builder.build());
         final Session session = factory.openSession();
         final Book book = new Book("9781617291999 ", "Java 8 in Action", "Raoul-Gabriel Urma, Mario Fusco, and Alan Mycroft");
