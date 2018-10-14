@@ -14,7 +14,8 @@ import org.hibernate.SessionFactory;
 public class Main {
 
     public static void main(String[] args) {
-        final SessionFactory factory = HibernateUtil.createSessionFactory();
+//        final SessionFactory factory = HibernateUtil.createSessionFactory("hibernate.properties");
+        final SessionFactory factory = HibernateUtil2.createSessionFactory();
         final Session session = factory.openSession();
         final Book book = new Book("9781617291999", "Java 8 in Action", "Raoul-Gabriel Urma, Mario Fusco, and Alan Mycroft");
         session.beginTransaction();
